@@ -20,9 +20,17 @@ defmodule PostsBackendWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PostsBackendWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", PostsBackendWeb do
+    pipe_through :api
+
+    resources "/posts", PostController
+  end
+
+  # scope "/" PostsBackendWeb do
+  #  pipe_through :api
+
+  #  end
+  #end
 
   # Enables LiveDashboard only for development
   #
