@@ -20,8 +20,8 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Source: https://github.com/phoenixframework/phoenix
 
 
-  ## Development Steps
+## Development Steps
   * Generates controller, views, and context for the Post, which is going to be a JSON resource.
-    *  mix phx.gen.json Content Post posts title:string body:text status:string published_at:utc_datetime
-  * Add CREAT TYPE post_status AS ENUM('unpublished', 'published'); in the migration file
-  * Add Route /api/posts in router.ex for the CRUD operations via api
+    *  `mix phx.gen.json Content Post posts title:string body:text status:string published_at:utc_datetime`
+  * Add `CREAT TYPE post_status AS ENUM('unpublished', 'published');` in the migration file
+  * Add Route `/api/posts` in router.ex for the CRUD operations via api
