@@ -12,11 +12,18 @@
 ## Development Steps
 * React Navigation
     - Follow https://reactnavigation.org/docs/getting-started/
+
 * Stack Naigator
     - Run `npm install @react-navigation/stack`
 
 * axios
     - Run `npm install axios`
+
+* dayjs for DateTime format
+    - Run `npm install dayjs`
+
+* Picker
+    - Run `npm install @react-native-community/picker`
 
 * Run `npm install` to make sure we get all dependencies and they are updated
 * Run `pod install` in ios folder
