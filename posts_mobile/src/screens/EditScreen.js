@@ -8,7 +8,7 @@ const EditScreen = ({navigation, route}) => {
     const id = route.params.id;
     const {state, editPost} = useContext(Context);
 
-    const post = state.find(
+    const post = state.posts.find(
         post => post.id === id);
 
     return (

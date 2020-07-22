@@ -7,27 +7,19 @@ import {
 } from 'react-native';
 
 import { Context } from '../context/PostContext';
-import dayjs from 'dayjs';
+import DateTime from '../components/DateTime';
 
 const DisplayScreen = ({navigation, route}) => {
     const id = route.params.id;
     const { state } = useContext(Context);
-    const post = state.find((post) => post.id === id);
+    const post = state.posts.find((post) => post.id === id);
     
     navigation.setOptions({
         headerRight: () => (
             <Button title="Edit" onPress={() => navigation.navigate('Edit', {id})} />
         )
     });
-
-    const DateTime = (data) => {
-        if (data.datetime) {
-            return dayjs(data.datetime).format('MMM D, YYYY h:mm A');
-        } else {
-            return null;
-        }
-    }
-
+    console.log(post);
     return (
         <View>
             <Text style={styles.title}>{post.title}</Text>
